@@ -12,7 +12,7 @@ public class LiteralTest {
 
 	@Test
 	public void test() {
-		Literal c = new Literal("test");
+		Literal c = new Literal("Test");
 		ArrayList<String> arrayList = new ArrayList<String>();
 		arrayList = c.randomExpansion(2, 1);
 		assertTrue(arrayList.isEmpty());
