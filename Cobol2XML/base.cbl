@@ -10,4 +10,4 @@ working-storage section.
 
 procedure division.
 
-22 bob value 12.44.
+23 bob value 12.44.
