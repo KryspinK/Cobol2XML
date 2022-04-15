@@ -11,3 +11,5 @@ working-storage section.
 procedure division.
 
 69 bob value 12.44.
+
+***--- This is a test comment.

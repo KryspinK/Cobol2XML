@@ -78,7 +78,10 @@ public class XMLPayload {
 		}
 		
 		
-		
+		String commentLine = c.getCommentLine();
+		if (commentLine != null) {
+			this.addCommentLineElement(commentLine);
+		}
 		
 		String sectionName = c.getSectionName();
 		if (sectionName != null) {
