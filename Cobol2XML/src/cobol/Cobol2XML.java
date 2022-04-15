@@ -74,6 +74,10 @@ public class Cobol2XML {
         XMLPayload xmlp = new XMLPayload();
 		InputStream is = null;
 		BufferedReader r = null;
+		
+		System.out.println("arg[0] = " + args[0] + "\n");
+		System.out.println("arg[1] = " + args[1] );
+		
 		try {
 			is = new FileInputStream(args[0]);
 			try {

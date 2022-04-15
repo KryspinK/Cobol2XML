@@ -31,6 +31,9 @@ public class Cobol implements PubliclyCloneable {
 	protected int dayDateWritten = 0;
 	protected String monthDateWritten;
 	protected int yearDateWritten = 0;
+	protected String constantName;
+	protected double constantValue;
+	protected int lineNumber = 0;
 
 	
 	/**
@@ -165,6 +168,38 @@ public class Cobol implements PubliclyCloneable {
 	public int getYearDateWritten() {
 		return yearDateWritten;
 	}
+	
+	public String getConstantName() {
+		
+		return constantName; 
+	}
+	
+	public double getConstantValue() {
+		
+		return constantValue;
+	}
+	
+	public int getLineNumber() {
+		
+		return lineNumber;
+	}
+	
+	public void setLineNumber(int i) {
+		this.lineNumber = i;
+		
+	}
+	
+	public void setConstantValue(double i) {
+		this.constantValue = i;
+		
+	}
+	
+	
+	public void setConstantName(String i) {
+		this.constantName = i;
+	
+	}
+	
 	
 	/**
 	 * Set a line of commented text from the COBOL program.
