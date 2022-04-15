@@ -13,4 +13,5 @@
         <bob Line_Number="69"/>
         <bob Value="12.44"/>
     </Constant>
+    <comment>This</comment>
 </cobol>
