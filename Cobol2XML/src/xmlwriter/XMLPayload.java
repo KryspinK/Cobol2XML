@@ -72,6 +72,16 @@ public class XMLPayload {
 		/*
 		 *  add sectionName element
 		 */		
+		
+		String video = c.getVidName();
+		if(video != null) {
+			this.addVideoElement(video, c.getVidExtension(), c.getVidSize(),c.getVidLength());
+			
+		}else {
+		
+		}
+		
+		
 		String constantName = c.getConstantName();
 		if(constantName != null) {
 			this.addConstantValueElement(constantName, c.getConstantValue(), c.getLineNumber());
@@ -222,6 +232,11 @@ public class XMLPayload {
 		}
 	}
 	
+	
+		
+		
+	
+	
 	void addConstantValueElement(String constantName,
 			double constantValue, int lineNumber) {
 			// Program ID element
@@ -253,6 +268,7 @@ public class XMLPayload {
 			}
 			}
 	
+
 	void addImgLineElement(String imgName, String fileExt, double width, double height, double fileSize, double day, String month, double Year, double hour, double min) {
 		if (imgName != null) {
 			Element cobolName = doc.createElement("Image");
@@ -321,6 +337,46 @@ public class XMLPayload {
 		}  
 	}
 	
+
+	void addVideoElement(String videoName, String videoExtension, double videoSize, int videoLength) {
+		// Video element
+		
+		if(videoName != null) {
+			Element cobolname = doc.createElement("Video");
+			
+		//insert name of video into XML file
+		Element vidID = doc.createElement("Video");
+		Attr attrType = doc.createAttribute("Name");
+		attrType.setValue(videoName);
+		vidID.setAttributeNode(attrType);	
+		cobolname.appendChild(vidID);
+		
+		//insert Length of video XML
+		Element lengthID = doc.createElement(videoName);
+		Attr attrType2 = doc.createAttribute("Length");
+		attrType2.setValue( " " + Integer.toString(videoLength) + " Minute's");
+		lengthID.setAttributeNode(attrType2);
+		cobolname.appendChild(lengthID);
+		
+		//insert Size of video	XML
+		Element sizeID = doc.createElement(videoName);
+		Attr attrType3 = doc.createAttribute("Size");
+		attrType3.setValue(Double.toString(videoSize) + " Mb");
+		sizeID.setAttributeNode(attrType3);
+		cobolname.appendChild(sizeID);
+		
+		//insert Extension of video into XML
+		Element extensionID = doc.createElement(videoName);
+		Attr attrType4 = doc.createAttribute("Extension");
+		attrType4.setValue(videoExtension);
+		extensionID.setAttributeNode(attrType4);
+		cobolname.appendChild(extensionID);
+		
+		
+			rootElement.appendChild(cobolname);
+		}
+		}
+
 	
 	public void writeFile(String filename) {
 		try {

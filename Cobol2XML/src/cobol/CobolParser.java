@@ -25,6 +25,7 @@ import parse.Empty;
 import parse.Parser;
 import parse.Sequence;
 import parse.tokens.CaselessLiteral;
+import parse.tokens.Literal;
 import parse.tokens.Num;
 import parse.tokens.Symbol;
 import parse.tokens.Tokenizer;
@@ -59,14 +60,18 @@ public class CobolParser {
 		
 		a.add( CommentLine() );
 		
+
 		a.add( imgLine() );
 		
-		System.out.println(a.toString());
+
+		a.add( video() );
+
 		
 		a.add(new Empty());
 		return a;
 	}
 	
+
 	protected Parser imgLine() {
 		Sequence s = new Sequence();
 		
@@ -95,6 +100,23 @@ public class CobolParser {
 		return s;
 	}
 	
+
+	protected Parser video() {
+	
+				Sequence s = new Sequence();
+				s.add(new CaselessLiteral("video") );
+				s.add(new Word() );
+				s.add(new Num() );
+				s.add(new Num() );
+				s.add(new Word() );
+				s.add(new Symbol('.').discard());
+				s.setAssembler(new videoAssembler());
+				return s;
+		
+		
+	}
+
+
 	protected Parser CommentLine() {
 		Sequence s = new Sequence();
 		s.add(new Symbol("*"));
@@ -103,8 +125,8 @@ public class CobolParser {
 		s.add(new Symbol("-"));
 		s.add(new Symbol("-"));
 		s.add(new Symbol("-"));
-		s.add(new Word().setAssembler(new CommentLineAssembler()) );
-		//s.setAssembler(new CommentLineAssembler());
+		s.add(new Word());
+		s.setAssembler(new CommentLineAssembler());
 		return s;
 
 	}
@@ -180,8 +202,6 @@ public class CobolParser {
 
 		//This next Word actually contains month and year (which are extracted in DateAssembler
 		s.add(new Word());
-		s.add(new Symbol('-').discard());
-		s.add(new Word().discard());
 		s.add(new Symbol('.').discard());
 		s.setAssembler(new DateAssembler());
 		return s;

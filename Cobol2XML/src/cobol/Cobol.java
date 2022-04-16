@@ -35,6 +35,11 @@ public class Cobol implements PubliclyCloneable {
 	protected double minImgCreated = 0.0;
 	protected double fileSize = 0.0;
 	
+	protected String vidName;
+	protected double vidSize;
+	protected int vidLength;
+	protected String vidExtension;
+
 	protected String commentLine;
 	protected String program_id;
 	protected String sectionName;
@@ -271,6 +276,54 @@ public class Cobol implements PubliclyCloneable {
 		this.constantName = i;
 	
 	}
+	
+	/*
+	 * Getter and Setter for video 
+	 */
+	
+	public String getVidName() {
+		
+		return vidName;
+	}
+	
+	public String getVidExtension() {
+		
+		return vidExtension;
+	}
+	
+	public int getVidLength() {
+		
+		return vidLength;
+	}
+	
+	public double getVidSize() {
+		
+		return vidSize;
+	}
+	
+	public void setVidName(String s) {
+		this.vidName = s;
+		
+	}
+	
+	public void setVidExtension(String s) {
+		this.vidExtension = s;
+		
+	}
+	
+	public void setVidLength(int d) {
+		this.vidLength = d;
+		
+	}
+	
+	public void setVidSize(double d) {
+		this.vidSize = d;
+		
+	}
+	
+	
+	
+	
 	
 	
 	/**
