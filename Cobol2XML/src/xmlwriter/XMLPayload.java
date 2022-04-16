@@ -140,10 +140,15 @@ public class XMLPayload {
 		if(yearDateWritten != 0) {
 			this.addYearDateWrittenElement( yearDateWritten );
 		}
-
+		
+		String imageName = c.getImgName();
+		if (imageName != null) {
+			this.addImgLineElement(imageName, c.getImgExtension(), c.getImgWidth(), c.getImgHeight(), c.getFileSize(), c.getDayImgCreated(), c.getMonthImgCreated(), c.getYearImgCreated(), c.getHourImgCreated(), c.getMinImgCreated());
+		}
 	}
 	
-
+	
+	
  	void addProgram_IDElement(String stringElement) {
 		//  Program ID element
 		
@@ -247,6 +252,75 @@ public class XMLPayload {
 			rootElement.appendChild(cobolname);
 			}
 			}
+	
+	void addImgLineElement(String imgName, String fileExt, double width, double height, double fileSize, double day, String month, double Year, double hour, double min) {
+		if (imgName != null) {
+			Element cobolName = doc.createElement("Image");
+			
+			Element imgID = doc.createElement("Image");
+			Attr attrType = doc.createAttribute("Name");
+			attrType.setValue(imgName);
+			imgID.setAttributeNode(attrType);
+			cobolName.appendChild(imgID);
+			
+			Element imgExt = doc.createElement("Image");
+			Attr attrType2 = doc.createAttribute("Extension");
+			attrType2.setValue(fileExt);
+			imgExt.setAttributeNode(attrType2);
+			cobolName.appendChild(imgExt);
+			
+			Element imgWidth = doc.createElement("Image");
+			Attr attrType3 = doc.createAttribute("Width");
+			attrType3.setValue(Double.toString(width));
+			imgWidth.setAttributeNode(attrType3);
+			cobolName.appendChild(imgWidth);
+			
+			Element imgHeight = doc.createElement("Image");
+			Attr attrType4 = doc.createAttribute("Height");
+			attrType4.setValue(Double.toString(height));
+			imgHeight.setAttributeNode(attrType4);
+			cobolName.appendChild(imgHeight);
+			
+			Element imgFileSize = doc.createElement("Image");
+			Attr attrType5 = doc.createAttribute("File Size");
+			attrType5.setValue(Double.toString(fileSize));
+			imgFileSize.setAttributeNode(attrType5);
+			cobolName.appendChild(imgFileSize);
+			
+			Element imgDay = doc.createElement("Image");
+			Attr attrType6 = doc.createAttribute("Day Image Taken");
+			attrType6.setValue(Double.toString(day));
+			imgDay.setAttributeNode(attrType6);
+			cobolName.appendChild(imgDay);
+			
+			Element imgMonth = doc.createElement("Image");
+			Attr attrType7 = doc.createAttribute("Month Image Taken");
+			attrType7.setValue(month);
+			imgMonth.setAttributeNode(attrType7);
+			cobolName.appendChild(imgMonth);
+			
+			Element imgYear = doc.createElement("Image");
+			Attr attrType8 = doc.createAttribute("Year Image Taken");
+			attrType8.setValue(Double.toString(Year));
+			imgYear.setAttributeNode(attrType8);
+			cobolName.appendChild(imgYear);
+			
+			Element imgHour = doc.createElement("Image");
+			Attr attrType9 = doc.createAttribute("Hour Image Taken");
+			attrType9.setValue(Double.toString(hour));
+			imgHour.setAttributeNode(attrType9);
+			cobolName.appendChild(imgHour);
+			
+			Element imgMin = doc.createElement("Image");
+			Attr attrType10 = doc.createAttribute("Minute Image Taken");
+			attrType10.setValue(Double.toString(min));
+			imgMin.setAttributeNode(attrType10);
+			cobolName.appendChild(imgMin);
+			
+			rootElement.appendChild(cobolName);
+		}  
+	}
+	
 	
 	public void writeFile(String filename) {
 		try {

@@ -25,15 +25,15 @@ import utensil.*;
 
 public class Cobol implements PubliclyCloneable {
 	protected String imgName;
-	protected double imgWidth;
-	protected double imgHeight;
+	protected double imgWidth = 0.0;
+	protected double imgHeight = 0.0;
 	protected String imgExtension;
-	protected double dayImgCreated;
-	protected double monthImgCreated;
-	protected double yearImgCreated;
-	protected double hourImgCreated;
-	protected double minImgCreated;
-	protected double fileSize;
+	protected double dayImgCreated = 0.0;
+	protected String monthImgCreated;
+	protected double yearImgCreated = 0.0;
+	protected double hourImgCreated = 0.0;
+	protected double minImgCreated = 0.0;
+	protected double fileSize = 0.0;
 	
 	protected String commentLine;
 	protected String program_id;
@@ -113,7 +113,69 @@ public class Cobol implements PubliclyCloneable {
 	    return super.hashCode();
 	  }
 
-
+	 
+	 
+	 
+	public String getImgName() {
+		return imgName;
+	}
+	public void setImgName(String imgName) {
+		this.imgName = imgName;
+	}
+	public double getImgWidth() {
+		return imgWidth;
+	}
+	public void setImgWidth(double imgWidth) {
+		this.imgWidth = imgWidth;
+	}
+	public double getImgHeight() {
+		return imgHeight;
+	}
+	public void setImgHeight(double imgHeight) {
+		this.imgHeight = imgHeight;
+	}
+	public String getImgExtension() {
+		return imgExtension;
+	}
+	public void setImgExtension(String imgExtension) {
+		this.imgExtension = imgExtension;
+	}
+	public double getDayImgCreated() {
+		return dayImgCreated;
+	}
+	public void setDayImgCreated(double dayImgCreated) {
+		this.dayImgCreated = dayImgCreated;
+	}
+	public String getMonthImgCreated() {
+		return monthImgCreated;
+	}
+	public void setMonthImgCreated(String monthImgCreated) {
+		this.monthImgCreated = monthImgCreated;
+	}
+	public double getYearImgCreated() {
+		return yearImgCreated;
+	}
+	public void setYearImgCreated(double yearImgCreated) {
+		this.yearImgCreated = yearImgCreated;
+	}
+	public double getHourImgCreated() {
+		return hourImgCreated;
+	}
+	public void setHourImgCreated(double hourImgCreated) {
+		this.hourImgCreated = hourImgCreated;
+	}
+	public double getMinImgCreated() {
+		return minImgCreated;
+	}
+	public void setMinImgCreated(double minImgCreated) {
+		this.minImgCreated = minImgCreated;
+	}
+	public double getFileSize() {
+		return fileSize;
+	}
+	public void setFileSize(double fileSize) {
+		this.fileSize = fileSize;
+	}
 	/**
 	 * Return line of commented text from the COBOL program.
 	 *

@@ -59,8 +59,40 @@ public class CobolParser {
 		
 		a.add( CommentLine() );
 		
+		a.add( imgLine() );
+		
+		System.out.println(a.toString());
+		
 		a.add(new Empty());
 		return a;
+	}
+	
+	protected Parser imgLine() {
+		Sequence s = new Sequence();
+		
+		s.add(new CaselessLiteral("img"));
+		s.add(new Word() ); // File name
+		s.add(new Word() ); // File Extension
+		s.add(new Num() ); // Width
+		s.add(new Num() ); // Height
+		s.add(new Num () ); // File Size
+	
+		s.add(new Num()); // Day
+		
+		s.add(new Word()); // Month
+		
+		s.add(new Num()); // Year
+		
+		s.add(new Num()); // Hour
+
+		s.add(new Num());
+		s.add(new Symbol(".").discard());
+		
+		//System.out.println(s.toString());
+		
+		s.setAssembler(new imgLineAssembler());
+		
+		return s;
 	}
 	
 	protected Parser CommentLine() {
