@@ -14,8 +14,7 @@ procedure division.
 
 ***--- This-is-a-test-comment.
 
-<<<<<<< Updated upstream
-img myportrait png 100 100 450 7 oct 2015 17 04.
-=======
+img sams-Birthday png.
+
 video Sams-Birthday 7 275 mp4.
->>>>>>> Stashed changes
+

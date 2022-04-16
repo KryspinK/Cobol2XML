@@ -1,6 +1,6 @@
-Apr 16, 2022 8:04:32 PM cobol.Cobol2XML main
+Apr 16, 2022 8:23:15 PM cobol.Cobol2XML main
 INFO: Cobol2XML V0.1.0
-Apr 16, 2022 8:04:32 PM xmlwriter.XMLPayload writeFile
+Apr 16, 2022 8:23:15 PM xmlwriter.XMLPayload writeFile
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <cobol>
     <division>identification</division>
@@ -17,6 +17,10 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <bob Value="12.44"/>
     </Constant>
     <comment>This-is-a-test-comment</comment>
+    <Image>
+        <Image Name="sams-Birthday"/>
+        <Image Extension="png"/>
+    </Image>
     <Video>
         <Video Name="Sams-Birthday"/>
         <Sams-Birthday Length=" 7 Minute's"/>

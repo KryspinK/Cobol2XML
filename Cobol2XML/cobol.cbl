@@ -10,8 +10,18 @@
     <division>procedure</division>
     <Constant>
         <Constant Name="bob"/>
-        <bob Line_Number="69"/>
+        <bob Line_Number="22"/>
         <bob Value="12.44"/>
     </Constant>
     <comment>This-is-a-test-comment</comment>
+    <Image>
+        <Image Name="sams-Birthday"/>
+        <Image Extension="png"/>
+    </Image>
+    <Video>
+        <Video Name="Sams-Birthday"/>
+        <Sams-Birthday Length=" 7 Minute's"/>
+        <Sams-Birthday Size="275.0 Mb"/>
+        <Sams-Birthday Extension="mp4"/>
+    </Video>
 </cobol>

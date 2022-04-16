@@ -76,25 +76,9 @@ public class CobolParser {
 		Sequence s = new Sequence();
 		
 		s.add(new CaselessLiteral("img"));
-		s.add(new Word() ); // File name
-		s.add(new Word() ); // File Extension
-		s.add(new Num() ); // Width
-		s.add(new Num() ); // Height
-		s.add(new Num () ); // File Size
-	
-		s.add(new Num()); // Day
-		
-		s.add(new Word()); // Month
-		
-		s.add(new Num()); // Year
-		
-		s.add(new Num()); // Hour
-
-		s.add(new Num());
-		s.add(new Symbol(".").discard());
-		
-		//System.out.println(s.toString());
-		
+		s.add(new Word());
+		s.add(new Word());
+		s.add(new Symbol('.').discard());
 		s.setAssembler(new imgLineAssembler());
 		
 		return s;
