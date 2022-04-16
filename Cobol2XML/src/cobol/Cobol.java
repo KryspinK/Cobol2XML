@@ -24,6 +24,17 @@ package cobol;
 import utensil.*;
 
 public class Cobol implements PubliclyCloneable {
+	protected String imgName;
+	protected double imgWidth;
+	protected double imgHeight;
+	protected String imgExtension;
+	protected double dayImgCreated;
+	protected double monthImgCreated;
+	protected double yearImgCreated;
+	protected double hourImgCreated;
+	protected double minImgCreated;
+	protected double fileSize;
+	
 	protected String commentLine;
 	protected String program_id;
 	protected String sectionName;
