@@ -12,6 +12,16 @@ public class imgLineAssembler extends Assembler {
 		Cobol c = new Cobol();
 		
 		Token t = (Token) a.pop();
+		
+		
+		c.setImgSize( (int) t.nval());
+		
+		t = (Token) a.pop();
+		
+		c.setImgHeight( (int) t.nval());
+		
+		t = (Token) a.pop();
+		
 		c.setImgWidth( (int) t.nval());
 		
 		

@@ -79,6 +79,8 @@ public class CobolParser {
 		s.add(new Word());
 		s.add(new Word());
 		s.add(new Num());
+		s.add(new Num());
+		s.add(new Num());
 		s.setAssembler(new imgLineAssembler());
 		
 		return s;

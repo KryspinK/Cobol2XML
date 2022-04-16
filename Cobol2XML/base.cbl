@@ -15,7 +15,9 @@ procedure division.
 ***--- This-is-a-test-comment.
 
 
-img Sams-Birthday png 234
+img Sams-Birthday png 234 456 50.
 
 video Sams-Birthday 7 275 mp4.
+
+img large-black-cock jpeg 50 150 300.
 

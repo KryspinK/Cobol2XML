@@ -27,6 +27,8 @@ public class Cobol implements PubliclyCloneable {
 	protected String imgName;
 	protected String imgExtension;
 	protected int imgWidth;
+	protected int imgHeight;
+	protected int imgSize;
 	
 	protected String vidName;
 	protected double vidSize;
@@ -136,6 +138,22 @@ public class Cobol implements PubliclyCloneable {
 	public void setImgWidth(int i) {
 		this.imgWidth = i;
 	
+	}
+	
+	public int getImgHeight() {
+		return imgHeight;
+	}
+	
+	public void setImgHeight(int imgHeight) {
+		this.imgHeight = imgHeight;
+	}
+	
+	public void setImgSize(int imgSize) {
+		this.imgSize = imgSize;
+	}
+	
+	public int getImgSize() {
+		return imgSize;
 	}
 	
 	
