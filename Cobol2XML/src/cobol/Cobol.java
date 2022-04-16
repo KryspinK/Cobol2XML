@@ -26,6 +26,7 @@ import utensil.*;
 public class Cobol implements PubliclyCloneable {
 	protected String imgName;
 	protected String imgExtension;
+	protected int imgWidth;
 	
 	protected String vidName;
 	protected double vidSize;
@@ -125,6 +126,16 @@ public class Cobol implements PubliclyCloneable {
 	}
 	public void setImgExtension(String imgExtension) {
 		this.imgExtension = imgExtension;
+	}
+	
+	public int getImgWidth() {
+		
+		return imgWidth;
+	}
+	
+	public void setImgWidth(int i) {
+		this.imgWidth = i;
+	
 	}
 	
 	

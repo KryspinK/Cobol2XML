@@ -153,7 +153,7 @@ public class XMLPayload {
 		
 		String imageName = c.getImgName();
 		if (imageName != null) {
-			this.addImgLineElement(imageName, c.getImgExtension());
+			this.addImgLineElement(imageName, c.getImgExtension(), c.getImgWidth());
 		}
 	}
 	
@@ -269,7 +269,7 @@ public class XMLPayload {
 			}
 	
 
-	void addImgLineElement(String imgName, String fileExt) {
+	void addImgLineElement(String imgName, String fileExt, int imgWidth) {
 		if (imgName != null) {
 			Element cobolName = doc.createElement("Image");
 			
@@ -284,6 +284,13 @@ public class XMLPayload {
 			attrType2.setValue(fileExt);
 			imgExt.setAttributeNode(attrType2);
 			cobolName.appendChild(imgExt);
+			
+			Element imgWidthID = doc.createElement("Image");
+			Attr attrType3 = doc.createAttribute("Width");
+			attrType3.setValue(Integer.toString(imgWidth) + " Pixels");
+			imgWidthID.setAttributeNode(attrType3);
+			cobolName.appendChild(imgWidthID);
+			
 					
 			rootElement.appendChild(cobolName);
 		}  

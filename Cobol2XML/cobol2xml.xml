@@ -14,6 +14,11 @@
         <bob Value="12.44"/>
     </Constant>
     <comment>This-is-a-test-comment</comment>
+    <Image>
+        <Image Name="Sams-Birthday"/>
+        <Image Extension="png"/>
+        <Image Width="234 Pixels"/>
+    </Image>
     <Video>
         <Video Name="Sams-Birthday"/>
         <Sams-Birthday Length=" 7 Minute's"/>

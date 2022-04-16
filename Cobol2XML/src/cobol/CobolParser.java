@@ -78,7 +78,7 @@ public class CobolParser {
 		s.add(new CaselessLiteral("img"));
 		s.add(new Word());
 		s.add(new Word());
-		s.add(new Symbol('.').discard());
+		s.add(new Num());
 		s.setAssembler(new imgLineAssembler());
 		
 		return s;
