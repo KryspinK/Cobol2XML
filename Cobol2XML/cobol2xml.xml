@@ -18,6 +18,8 @@
         <Image Name="Sams-Birthday"/>
         <Image Extension="png"/>
         <Image Width="234 Pixels"/>
+        <Image Height="456 Pixels"/>
+        <Image Size="50 MB's"/>
     </Image>
     <Video>
         <Video Name="Sams-Birthday"/>
