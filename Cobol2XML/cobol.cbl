@@ -17,7 +17,7 @@
     <Image>
         <Image Name="Sams-Birthday"/>
         <Image Extension="png"/>
-        <Image Width="234 Pixels"/>
+        <Image Width="254 Pixels"/>
         <Image Height="456 Pixels"/>
         <Image Size="50 MB's"/>
     </Image>
@@ -27,11 +27,4 @@
         <Sams-Birthday Size="275.0 Mb"/>
         <Sams-Birthday Extension="mp4"/>
     </Video>
-    <Image>
-        <Image Name="large-black-cock"/>
-        <Image Extension="jpeg"/>
-        <Image Width="50 Pixels"/>
-        <Image Height="150 Pixels"/>
-        <Image Size="300 MB's"/>
-    </Image>
 </cobol>

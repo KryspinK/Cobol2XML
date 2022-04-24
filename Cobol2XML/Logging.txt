@@ -1,6 +1,6 @@
-Apr 16, 2022 9:29:19 PM cobol.Cobol2XML main
+Apr 24, 2022 10:15:16 PM cobol.Cobol2XML main
 INFO: Cobol2XML V0.1.0
-Apr 16, 2022 9:29:19 PM xmlwriter.XMLPayload writeFile
+Apr 24, 2022 10:15:16 PM xmlwriter.XMLPayload writeFile
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <cobol>
     <division>identification</division>
@@ -20,7 +20,7 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
     <Image>
         <Image Name="Sams-Birthday"/>
         <Image Extension="png"/>
-        <Image Width="234 Pixels"/>
+        <Image Width="254 Pixels"/>
         <Image Height="456 Pixels"/>
         <Image Size="50 MB's"/>
     </Image>
